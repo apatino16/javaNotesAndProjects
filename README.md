@@ -7,5 +7,6 @@ Notes on the fundamentals of Java.
 - [Setting Up the Java Environment](./javaNotes/setupEnvironment.md)
 - [Introduction to Java Programming](./javaNotes/introJavaProgramming.md)
 - [Variables and Assignments](/javaNotes/variablesAndAssignments.md)
+- [Branches](/javaNotes/branches.md)
 
 ## Sources
