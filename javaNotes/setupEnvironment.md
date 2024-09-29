@@ -2,6 +2,18 @@
 
 ## **Download and Install the Java Development Kit (JDK)**
    - **JDK (Java Development Kit)** is necessary for developing and running Java applications. Download it from [Oracle’s website](https://www.oracle.com/java/technologies/downloads/?er=221886).
+   - Navigate to the directory where the `.deb` file was downloaded.
+   - Install the downloaded .deb package using dpkg:
+   ```
+   // Update to the version you want to use (latest is recommended)
+    sudo dpkg -i jdk-23_linux-x64_bin.deb
+   ```
+   - Verify the Installation
+   ```
+   // Check the default version 
+   java -version
+   ```
+
 
 ### **Key Components of JDK:**
 - **Java Command**: Runs Java programs.
