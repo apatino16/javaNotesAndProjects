@@ -10,6 +10,7 @@ Notes on the fundamentals of Java.
 - [Branches](/javaNotes/branches.md)
 - [Loops](/javaNotes/loops.md)
 - [Arrays](/javaNotes/arrays.md)
+- [Methods](/jaaNotes/methods.md)
 
 ## Sources
 - [Java Programming II: Core Java Programming - UCSD Extended Studies](https://extendedstudies.ucsd.edu/courses-and-programs/java-programming-ii-core-java-programming)
