@@ -250,6 +250,96 @@ public static double calculateArea(double radius) {
    ```
    javadoc -d destination ProgramName.java
    ```
+---
+## **Unit Testing Methods**
+
+**Unit Testing** is a fundamental practice in software development that involves testing individual units or components of a program to ensure they behave correctly. A **unit** is typically the smallest testable part of an application, such as a method or function.
+
+### Why Test in Units?
+- **Early Bug Detection**: By testing parts of a program individually, bugs can be found and fixed early, preventing larger issues when the whole program is integrated.
+- **Simplifies Debugging**: Testing each method independently helps isolate where issues occur, as opposed to searching through an entire program.
+
+### **Creating a Testbench (Test Harness)**
+A **testbench**, also known as a **test harness**, is a **separate program** designed specifically to test a method or a small set of related methods. The goal of a testbench is to **verify the correctness** of the method by passing in different inputs and checking if the outputs are as expected.
+
+Each set of inputs to the testbench is called a **test vector**. A good set of test vectors should cover:
+- **Typical inputs**: Common values that a user would normally input.
+- **Border cases**: Uncommon or extreme values, such as `0`, very large or small values, or negative numbers. Border cases help ensure that the method handles all potential scenarios.
+
+### **Using `assert` for Testing**
+In Java, you can use the `assert` statement to test if a certain expression is true. If the expression evaluates to `false`, `assert` will print an error message and halt the program. It has the form:
+
+```
+assert testExpression : detailedMessage;
+```
+
+- **`testExpression`**: A Boolean expression that is tested for `true` or `false`.
+- **`detailedMessage`**: A message that is displayed if `testExpression` evaluates to `false`. It helps describe the error.
+
+Example:
+
+```
+int result = addNumbers(2, 3);
+assert result == 5 : "Error: Expected 5 but got " + result;
+```
+
+If `result` is not `5`, this `assert` statement will output something like:
+```
+Exception in thread "main" java.lang.AssertionError: Error: Expected 5 but got X
+```
+
+### **Enabling Assertions in Java**
+By default, **assertions** are disabled in Java. To enable them, you need to add the `-ea` (enable assertions) flag when running your program.
+
+```
+java -ea TestHarness
+```
+
+Without enabling assertions, the `assert` statements will not execute, and any errors they would catch will not be reported.
+
+### **Example Test Harness Using Assertions**
+
+Suppose we have a method `multiplyByTwo()` that doubles its input:
+```
+public static int multiplyByTwo(int x) {
+    return x * 2;
+}
+```
+
+We can create a test harness to check if this method behaves correctly:
+
+```java
+public class TestHarness {
+    public static void main(String[] args) {
+        System.out.println("Testing started");
+
+        // Test typical inputs
+        assert multiplyByTwo(2) == 4 : "Error: 2 * 2 should be 4";
+        assert multiplyByTwo(0) == 0 : "Error: 0 * 2 should be 0";
+
+        // Test border case (negative number)
+        assert multiplyByTwo(-3) == -6 : "Error: -3 * 2 should be -6";
+
+        System.out.println("Testing completed");
+    }
+
+    public static int multiplyByTwo(int x) {
+        return x * 2;
+    }
+}
+```
+### **Interpreting the Output**
+- If all `assert` expressions evaluate to `true`, the program will output:
+  ```
+  Testing started
+  Testing completed
+  ```
+- If any `assert` expression evaluates to `false`, it will throw an `AssertionError` with the specified detailed message, and the program will halt.
+
+### **Benefits of Using Assertions**
+- **Compact & Readable Testing**: Assertions allow for short and readable test code.
+- **Immediate Error Identification**: When an assertion fails, it quickly identifies the issue by providing a message and line number.
+- **Border Case Testing**: Encourages the practice of including edge or border cases to test the robustness of methods.
 
 
 
