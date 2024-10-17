@@ -1,16 +1,22 @@
 # **Methods in Java**
 
-## **Method Basics**
-A **method** in Java is a reusable block of code that performs a specific task. Methods help organize code, make it more readable, and allow for code reuse.
+## **Introduction**
+A **method** in Java is a reusable block of code that performs a specific task and can be invoked by calling its name. Methods help reduce redundancy, improve program readability, and allow code reuse. They are used to organize functionality and simplify complex tasks.
 
-### **Reasons for Creating Methods**
-- **Improve readability**: Methods modularize your code, reducing clutter and improving readability.
+### **Reasons for Using Methods**
+- **Modularity**: Breaking code into smaller, manageable pieces.
+- **Maintainability**: Simplifies the debugging process and future changes.
 - **Abstraction**: You can focus on what a method does without knowing its inner workings.
 - **Reusability**: Avoid duplicating code by calling the same method multiple times across your program.
-- **Encapsulation**: Encapsulate the behavior of a class into smaller parts.
 
 ### **Defining a Method**
 A method is defined by a **method header** and a **method body**. The header specifies access modifiers, the return type, the method name, and parameters (if any). The body contains the code that the method executes.
+
+```java
+public static returnType methodName(parameters) {
+    // Method body: Code to be executed
+}
+```
 
 ```java
 // Example of a simple method
@@ -138,6 +144,36 @@ double average = findAverage(10, 20); // average is 15.0
 
 ---
 
+## **Method Overloading**
+**Method overloading** allows multiple methods with the same name but different parameter lists within the same class. This provides flexibility to handle different types of input.
+
+```
+public static int add(int a, int b) {
+    return a + b;
+}
+
+public static double add(double a, double b) {
+    return a + b;
+}
+
+add(5, 10);    // Calls int version
+add(5.5, 10.5); // Calls double version
+```
+
+- **Overloading is determined by the parameter list, not the return type**.
+
+---
+
+## **Methods and Arrays**
+Methods can accept arrays as parameters and can return arrays as well. This is useful when performing operations on collections of data.
+
+```java
+public static void printArray(int[] arr) {
+    for (int i : arr) {
+        System.out.println(i);
+    }
+}
+```
 ## **Useful Array Methods**
 Common operations on arrays include:
 - **Finding the Maximum Value**:
@@ -205,28 +241,8 @@ Common operations on arrays include:
 
 ---
 
-## **Method Overloading**
-**Method overloading** allows multiple methods with the same name but different parameter lists within the same class.
-
-```
-public static int add(int a, int b) {
-    return a + b;
-}
-
-public static double add(double a, double b) {
-    return a + b;
-}
-
-add(5, 10);    // Calls int version
-add(5.5, 10.5); // Calls double version
-```
-
-- **Overloading is determined by the parameter list, not the return type**.
-
----
-
 ## **Javadoc Comments for Java API Documentation**
-Javadoc comments start with `/**` and end with `*/`. They describe classes, methods, and their parameters/return values.
+Javadoc comments are used to generate documentation for Java classes and methods. Javadoc comments start with `/**` and end with `*/`. They describe classes, methods, and their parameters/return values.
 
 ```
 /**
