@@ -43,6 +43,14 @@ Imagine storing **365** temperatures, one for each day of the year. Instead of c
 
 ---
 
+## **Array Index and Length**
+- Arrays have indices starting at **0**. So, for an array of size 5, valid indices are 0 to 4.
+- Accessing an index outside this range throws an `ArrayIndexOutOfBoundsException`.
+
+- **Array length**: The length of an array is accessed via `.length`, which returns the number of elements in the array.
+
+---
+
 ## **Iterating Through Arrays**
 - Use a **`for` loop** to access each element of the array.
    ```java
@@ -78,13 +86,22 @@ Imagine storing **365** temperatures, one for each day of the year. Instead of c
 
 ---
 
+## **Modifying Arrays**
+- Arrays are **mutable**, meaning you can change the value of any element after initialization.
+   ```java
+   numbers[0] = 100;
+   ```
+
+---
+
+
 ## **Common Array Bugs**
 - **`ArrayIndexOutOfBoundsException`**: Occurs when trying to access an element outside the array's bounds.
    ```java
    int[] arr = {1, 2, 3};
    System.out.println(arr[3]); // Error: Index 3 out of bounds
    ```
-- **Off-by-One Errors**: Loop iterates **one too many** or **one too few** times.
+- **Off-by-One Errors**: Loop iterates **one too many** or **one too few** times. Always ensure loops iterate through `i < array.length`.
 
 ---
 
