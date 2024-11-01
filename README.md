@@ -19,5 +19,6 @@ Notes on the fundamentals of Java.
 
 ## Sources
 - [Java Programming II: Core Java Programming - UCSD Extended Studies](https://extendedstudies.ucsd.edu/courses-and-programs/java-programming-ii-core-java-programming)
+- [TreeHouse's Java Web Development V2](https://teamtreehouse.com/tracks/java-web-development)
 - [Oracle Java 8 Documentation](https://docs.oracle.com/javase/8/docs/api/overview-summary.html#overview.description)
 
