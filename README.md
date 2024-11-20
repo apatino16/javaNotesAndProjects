@@ -18,6 +18,7 @@ Notes on the fundamentals of Java.
 - [Interfaces](/javaNotes/interfaces.md)
 - [Exceptions](/javaNotes/exceptions.md)
 - [Genetics](/javaNotes/genetics.md)
+- [Collections](/javaNotes/collections.md)
 
 ## Sources
 - [Java Programming II: Core Java Programming - UCSD Extended Studies](https://extendedstudies.ucsd.edu/courses-and-programs/java-programming-ii-core-java-programming)
